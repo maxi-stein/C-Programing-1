@@ -12,6 +12,7 @@ typedef struct{
     float descuento;
 }registro;
 
+
 void getData(char* nomArchivo,registro* data){
     FILE* file=fopen(nomArchivo,"rt");
     int i=0;
