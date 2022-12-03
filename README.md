@@ -1,24 +1,32 @@
 # C-Programing-1
 This is a Final Exam I passed in Colleage in 2022.
 
-La casa de electrónica ShangTsung dispone de un archivo productos.txt en cual lista el id de producto, 
-marca, modelo, precio de lista y descuento por pago al contado. Se pide:
-1) Desarrollar la función void getData(char* nomArchivo, registro* data); que reciba el nombre 
-del archivo nomArchivo y el puntero a un vector data. La función debe abrir el archivo y cargarlo en el 
-vector data.
-2) Desarrollar la función int getMejorModelo(registro* data); que reciba el vector ya cargado y:
-a. Muestre por pantalla el contenido del vector.
-b. Devuelva el id del registro que es la mejor opción pagando al contado (es decir, la más barata
-incluyendo el descuento por pago al contado).
-3) Desarrollar la función void mostrarOrdenado(registro* data); que reciba el vector data y lo 
-muestre ordenado según el precio de lista (mostrar con formato: precio de lista, marca,
-modelo).
-Para todos los puntos, utilizar la siguiente estructura:
+The electronic store ShangTsung has the text file 'productos.txt' which lists the following parameters:
+Product ID 
+Brand
+Model
+Price List
+Discount Cash-In-Hand
+
+It is asked to:
+
+1) Create the function void getData(char* nameArchive, registry* data) that recieves the name of the file 
+nameArchive and a pointer to a vector data. The function must open the file and load its information to the vector data
+
+2) Create the function int getBestModel(registry* data) that recieves the loaded vector (from function 1) and   :
+    a. Shows in screen the content of the entire vector.
+    b. Returns the ID of the registry that has the best price if paid hand-on-cash (that is, the cheapest price
+including the discount for paying cash-in-hand).
+
+3) Create the function void showOrdered (registry* data) that recieves the vector data and 
+shows it ordered by price list (the format shall be: price list, brand, model).
+
+The following struct must be used in this exercise:
 #define DIM 55
 typedef struct{
  int id;
- char marca[DIM];
- char modelo[DIM];
- float precio;
- float descuento;
-} registro;
+ char brand[DIM];
+ char model[DIM];
+ float price;
+ float discount;
+} registry;
